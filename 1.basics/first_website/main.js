@@ -52,3 +52,46 @@ const changeColor = () => {
 };
 
 button.addEventListener("click", changeColor);
+
+let val = "str";
+let tasks = ["купить сахар", "скачать фильм", "покормить кота"];
+console.log(tasks[tasks.length - 1]);
+tasks.push("купить батарейки");
+console.log(tasks);
+let poppedEl = tasks.pop();
+console.log(poppedEl);
+console.log(tasks);
+tasks.unshift("полить цветок");
+console.log(tasks);
+tasks.shift();
+console.log(tasks);
+let arrOfArr = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+
+console.log(tasks);
+
+// for (let i = 0; i < tasks.length; i++) {
+//   console.log(tasks[i]);
+// }
+
+for (const task of tasks) {
+  console.log(task);
+}
+
+const newArr = tasks.map((task, index) => {
+  // return index + 1 + ". Не забыть " + task; конкатенация
+  return `${index + 1}. Не забыть ${task}`; // интерполяция
+});
+console.log(newArr);
+console.log(tasks);
+
+const shortTasks = tasks.filter((task) => {
+  return task.length <= 13;
+});
+
+console.log(shortTasks);
+
+let word = "word";
+console.log(word.length);
