@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-gpt.css" />
+    <script src="script.js" defer type="module"></script>
+    <script src="modal.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <button class="saved-btn">Saved Pokemons</button>
+      <div class="card">
+        <p class="card-hp">HP <span class="card-hp__stat js-hp">48</span></p>
+        <div class="image">
+          <img
+            class="js-img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
+            alt=""
+          />
+        </div>
+        <h3 class="card-name js-name">Pokemon</h3>
+        <div class="card-abilities js-abilities">
+          <span class="ability">normal</span>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-label">Attack:</span>
+            <span class="stat-value js-attack">49</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-label">Defense:</span>
+            <span class="stat-value js-defense">49</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-label">Speed:</span>
+            <span class="stat-value js-speed">45</span>
+          </div>
+        </div>
+      </div>
+      <button class="generate-random js-generate-btn">Generate Pokemon</button>
+    </div>
+
+    <div class="modal hidden">
+      <div class="modal-content">
+        <h2>Saved Pokemons</h2>
+        <div class="saved-list"></div>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

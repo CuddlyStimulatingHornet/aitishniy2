@@ -53,7 +53,6 @@ const changeColor = () => {
 
 button.addEventListener("click", changeColor);
 
-let val = "str";
 let tasks = ["купить сахар", "скачать фильм", "покормить кота"];
 console.log(tasks[tasks.length - 1]);
 tasks.push("купить батарейки");

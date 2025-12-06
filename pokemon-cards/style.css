@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 12rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.card-hp {
+  padding-left: 0.7rem;
+  padding-block: 0.01rem;
+  align-self: flex-end;
+  background-color: rgb(196, 163, 0);
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5rem;
+}
+
+.card-hp__stat {
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 81, 0);
+  padding-inline: 0.7rem;
+  border-radius: 5rem;
+}
+
+.card-name {
+  text-align: center;
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgb(230, 230, 230) 0%,
+    rgb(255, 213, 0) 20%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.image img {
+  height: 100%;
+}
+
+.card-abilities {
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+}
+
+.ability {
+  padding: 0.01rem 0.7rem;
+  background-color: rgb(196, 163, 0);
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5rem;
+}
+
+.stats__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
