@@ -1,10 +1,8 @@
 const radioImg = document.querySelector(".radio-img");
 const radioSelect = document.querySelector(".radio-select");
-const btn = document.querySelector(".play-btn");
-
+const playBtn = document.querySelector(".play-btn");
+const icon = document.querySelector(".fa-solid");
 const audio = document.createElement("audio");
-
-let isPlaying = true;
 
 const radioStations = [
   {
@@ -45,32 +43,35 @@ const radioStations = [
 ];
 
 function updateRadio() {
-  const currentRadio = radioStations.find(
-    (radio) => radio.name === radioSelect.value,
-  );
-
-  audio.src = currentRadio.url;
-  radioImg.src = currentRadio.img;
+  const currentRadio = radioSelect.value;
+  const radio = radioStations.find((radio) => radio.name === currentRadio);
+  audio.src = radio.url;
+  radioImg.src = radio.img;
 }
 
-radioSelect.addEventListener("change", (e) => {
-  updateRadio();
+function playRadio() {
+  icon.classList.remove("fa-circle-play");
+  icon.classList.add("fa-circle-pause");
   audio.play();
+}
+
+function stopRadio() {
+  icon.classList.remove("fa-circle-pause");
+  icon.classList.add("fa-circle-play");
+  audio.pause();
+}
+
+radioSelect.addEventListener("change", () => {
+  updateRadio();
+  playRadio();
 });
 
-btn.addEventListener("click", () => {
-  const icon = document.querySelector(".fa-solid");
-  if (isPlaying) {
-    icon.classList.remove("fa-circle-play");
-    icon.classList.add("fa-circle-pause");
-    audio.play();
+playBtn.addEventListener("click", (event) => {
+  if (audio.paused) {
+    playRadio();
   } else {
-    icon.classList.remove("fa-circle-pause");
-    icon.classList.add("fa-circle-play");
-    audio.pause();
+    stopRadio();
   }
-
-  isPlaying = !isPlaying;
 });
 
 updateRadio();
