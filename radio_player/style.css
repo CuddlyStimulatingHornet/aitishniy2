@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #dcdcdc;
+}
+
+.radio-player {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 310px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 2.5em;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 11px 28px 1px rgba(0, 0, 0, 0.13),
+    inset 0 0 12px 8px rgba(0, 0, 0, 0.33);
+}
+
+.radio-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-cover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  box-shadow: inset 0 0 30px 15px rgba(0, 0, 0, 0.44);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.radio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* заполняет квадрат */
+  object-position: center;
+}
+
+.radio-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+  max-width: 130px;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 12px 20px 10px 20px;
+  margin-top: 40px;
+
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.play-btn {
+  padding: 0;
+  margin-top: 20px;
+  background: none;
+  border: none;
+  aspect-ratio: 1 / 1;
+  width: 120px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.play-btn:active {
+  transform: scale(0.9);
+}
